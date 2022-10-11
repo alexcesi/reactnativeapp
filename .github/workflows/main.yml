@@ -34,4 +34,4 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: run deploy
-        run: rsync -avz .\android\app\build\outputs\apk\release/app-release.apk ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/mobile/
+        run: rsync -avz ./android/app/build/outputs/apk/release/app-release.apk ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/mobile/
